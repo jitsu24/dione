@@ -1,2 +1,1 @@
-import './src/styles/globals.css';
-import './src/styles/header.css';
+import './src/styles/main.scss';

@@ -1,0 +1,9 @@
+.feature{
+    position: relative;
+    background-color: #D24D57;
+
+    &__separator{
+        transform: translateY(-2rem);
+    }
+}
+

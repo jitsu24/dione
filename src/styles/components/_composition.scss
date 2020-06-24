@@ -1,0 +1,60 @@
+.composition{
+    position: relative;
+    padding: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include responsive(tab-port){
+        top: 0;
+        transform: translateY(10%);
+        padding: .1rem;
+        margin:  3rem auto;
+    }
+    
+
+
+&__photo {
+width: 50%;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, .4);
+    position: relative;
+    z-index: 10;
+    outline-offset: 2rem;
+    transition: all .1s;
+
+
+
+    &::before, &::after{
+margin: 0;
+padding: 0;
+box-sizing: inherit;
+    }
+
+    &--p1{
+        left: 2rem;
+        top: -1rem;
+    }
+    &--p2{
+        right: 3rem;
+        top: 1.5rem;
+    }
+    &--p3{
+        left: 16%;
+        top:-1.5rem;
+    }
+
+    &:hover{
+        outline: 1rem solid $color-primary;
+        transform: scale(1.1rem);
+        box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, .5);
+        z-index: 15;
+    }
+
+}
+}
+
+
+.composition-text{
+    padding: 1rem;
+
+}

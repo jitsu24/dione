@@ -1,0 +1,61 @@
+.header {
+    width: 100%;
+    height: 95vh;
+    position: relative;
+    background : linear-gradient(210deg,rgba($color-tertiary, .7), rgba($color-secondary, .89)), 
+    url('../../public/static/images/travel.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    transition: all cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+    @include responsive(tab-port){
+        height: 73vh;
+        clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+    }
+    @include responsive(phone){
+        height: 70vh;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    }
+
+}
+
+.header__content{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+    @include responsive(tab-port){
+        top: 51%;
+    }
+}
+
+
+.heading-primary--main{
+    display: block;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 2.2rem;
+    animation: moveInLeft .12s ease-out, fadeIn .13s ease-out;
+    opacity: 1;
+
+    @include responsive(phone){
+        font-size: 2.5rem;
+        letter-spacing:1.5rem;
+
+    }
+}
+
+.heading-primary--sub {
+    display: block;
+    font-size: 1.8rem;
+    animation: moveInRight .1s  .1s ease-out, fadeIn .1s ease-out;
+    opacity: 1;
+
+    @include responsive(phone){
+        font-size: 1.4rem;
+    }
+}
+

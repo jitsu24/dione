@@ -1,0 +1,112 @@
+.popular {
+    background: $color-grey-light-1;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+
+    &__options{
+        background: $color-white;
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+
+    }
+
+    &__option{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+
+        &:not(:last-child){
+         border-right: 1px solid $color-black;   
+        }
+    }
+
+    &__image{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    &__title{
+        margin-bottom: 0rem;
+
+    }
+    &__text{
+        margin-bottom: 0rem;
+    }
+    &__price{
+
+    }
+}
+
+
+
+
+
+
+
+
+
+.reviews {
+    background-color: grey;
+    padding: 8rem;
+}
+.reviews__card{
+    transition: all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    &:hover {
+        
+
+        & img{
+            filter: blur(.1rem);
+            -webkit-filter: blur(.1rem);
+            transform: scale(1.2);
+        }
+
+
+        & figcaption{
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+    }
+    
+}
+.reviews__content{
+    transform: translateX(-2rem);
+    position: relative;
+}
+.reviews__img{
+    background-color: red;
+    width: 5rem;
+    height: 5rem;
+    shape-outside: circle(50% at 50% 50%);
+    
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(3rem);
+    position: relative;
+    overflow: hidden;
+    float: left;
+    transition: all .15s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    
+
+    & img {
+height: 100%;
+transform: translateX(-3rem);
+transition: all .2s cubic-bezier(0.6, -0.28, 0.735, 0.041);
+    }
+    & figcaption {
+        position: absolute;
+        z-index: 10;
+        color: white;
+        top: 50%;
+        left: 50%;
+    
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.2rem;
+        opacity: 0;
+        transform: translate(-50%, 50%);
+        transition: all .2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    }
+
+
+}
